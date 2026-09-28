@@ -182,6 +182,7 @@
         <a href="#experiences" class="hover:text-saffron-600 transition-colors" id="navExperiences">Experiences</a>
         <a href="#aarti-schedule" class="hover:text-saffron-600 transition-colors" id="navAarti">Aarti Timings</a>
         <a href="#connectivity" class="hover:text-saffron-600 transition-colors" id="navReach">How to Reach</a>
+        <a href="#gallery" class="hover:text-saffron-600 transition-colors" id="navGallery">Gallery</a>
         <a href="#faqs" class="hover:text-saffron-600 transition-colors" id="navFaqs">FAQs</a>
       </nav>
 
@@ -222,16 +223,30 @@
       <a href="#experiences" onclick="toggleMenu()" class="block py-2 text-base font-semibold text-slate-800 hover:text-saffron-600" id="mNavExperiences">Sacred Experiences</a>
       <a href="#aarti-schedule" onclick="toggleMenu()" class="block py-2 text-base font-semibold text-slate-800 hover:text-saffron-600" id="mNavAarti">Aarti & Timings</a>
       <a href="#connectivity" onclick="toggleMenu()" class="block py-2 text-base font-semibold text-slate-800 hover:text-saffron-600" id="mNavReach">How to Reach</a>
+      <a href="#gallery" onclick="toggleMenu()" class="block py-2 text-base font-semibold text-slate-800 hover:text-saffron-600" id="mNavGallery">Photo Gallery</a>
       <a href="#faqs" onclick="toggleMenu()" class="block py-2 text-base font-semibold text-slate-800 hover:text-saffron-600" id="mNavFaqs">Visitor FAQs</a>
       <button onclick="toggleMenu(); openModal();" class="w-full mt-2 py-3 rounded-xl text-center font-semibold text-white bg-saffron-600 shadow-sm" id="mNavPlanBtn">Plan Your Visit</button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden custom-gradient text-white pt-20 pb-28 md:pt-28 md:pb-36">
+  <!-- Hero Section with Background Picture -->
+  <section class="relative overflow-hidden text-white pt-20 pb-28 md:pt-28 md:pb-36 min-h-[580px] flex items-center">
+    
+    <!-- Hero Background Image Layer (Replace the src with your own image file, e.g. "images/hero.jpg") -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img 
+        src="./assets/main2.jpg" 
+        alt="Saryu Ghat Riverfront Ayodhya" 
+        class="w-full h-full object-cover object-center transform scale-105 filter brightness-95"
+      >
+      <!-- Devotional Dark Gradient Overlay: Keeps text 100% legible while revealing the holy riverfront -->
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/30 via-slate-950/30 to-slate-900/65"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent"></div>
+    </div>
+
     <!-- Decorative Ambient Glows -->
-    <div class="absolute -top-24 -left-24 w-96 h-96 bg-saffron-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 right-0 w-80 h-80 bg-amber-400/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-saffron-500/20 rounded-full blur-3xl pointer-events-none z-[1]"></div>
+    <div class="absolute top-1/2 right-0 w-80 h-80 bg-amber-400/15 rounded-full blur-3xl pointer-events-none z-[1]"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
@@ -406,12 +421,24 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="ghatCardsContainer">
         
         <!-- Card 1: Ram Ki Paidi -->
-        <div class="ghat-card bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="ram-ki-paidi">
-          <div class="h-44 bg-gradient-to-br from-amber-600 to-saffron-800 p-6 flex flex-col justify-between text-white relative">
-            <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/30 rounded-md w-max" id="card1Tag">Deepotsav Arena</span>
-            <div>
-              <h3 class="text-xl font-bold font-cinzel" id="card1Title">Ram Ki Paidi</h3>
-              <p class="text-xs text-amber-200" id="card1Subtitle">Modern Stepped River Embankment</p>
+        <div class="ghat-card group bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="ram-ki-paidi">
+          <div class="h-48 relative overflow-hidden p-6 flex flex-col justify-between text-white">
+            <!-- Background Image -->
+            <img 
+              src="./assets/ram-ki-paidi.jpg" 
+              alt="Ram Ki Paidi Ghat" 
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              onerror="this.src='https://placehold.co/800x400/b45309/ffffff?text=Ram+Ki+Paidi'"
+            >
+            <!-- Card Dark Gradient Overlay for Contrast -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-slate-950/55"></div>
+            
+            <div class="relative z-10">
+              <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/50 backdrop-blur-sm border border-white/20 rounded-md w-max inline-block" id="card1Tag">Deepotsav Arena</span>
+            </div>
+            <div class="relative z-10">
+              <h3 class="text-xl font-bold font-cinzel text-amber-100" id="card1Title">Ram Ki Paidi</h3>
+              <p class="text-xs text-amber-300" id="card1Subtitle">Modern Stepped River Embankment</p>
             </div>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
@@ -426,12 +453,24 @@
         </div>
 
         <!-- Card 2: Naya Ghat -->
-        <div class="ghat-card bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="naya-ghat">
-          <div class="h-44 bg-gradient-to-br from-saffron-700 to-amber-900 p-6 flex flex-col justify-between text-white relative">
-            <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/30 rounded-md w-max" id="card2Tag">Aarti Epicentre</span>
-            <div>
-              <h3 class="text-xl font-bold font-cinzel" id="card2Title">Naya Ghat</h3>
-              <p class="text-xs text-amber-200" id="card2Subtitle">The Primary Bathing & Boating Hub</p>
+        <div class="ghat-card group bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="naya-ghat">
+          <div class="h-48 relative overflow-hidden p-6 flex flex-col justify-between text-white">
+            <!-- Background Image -->
+            <img 
+              src="./assets/naya-ghat.jpg" 
+              alt="Naya Ghat Aarti" 
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              onerror="this.src='https://placehold.co/800x400/d97706/ffffff?text=Naya+Ghat'"
+            >
+            <!-- Card Dark Gradient Overlay for Contrast -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-slate-950/55"></div>
+            
+            <div class="relative z-10">
+              <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/50 backdrop-blur-sm border border-white/20 rounded-md w-max inline-block" id="card2Tag">Aarti Epicentre</span>
+            </div>
+            <div class="relative z-10">
+              <h3 class="text-xl font-bold font-cinzel text-amber-100" id="card2Title">Naya Ghat</h3>
+              <p class="text-xs text-amber-300" id="card2Subtitle">The Primary Bathing & Boating Hub</p>
             </div>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
@@ -446,12 +485,24 @@
         </div>
 
         <!-- Card 3: Guptar Ghat -->
-        <div class="ghat-card bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="guptar-ghat">
-          <div class="h-44 bg-gradient-to-br from-slate-800 to-indigo-950 p-6 flex flex-col justify-between text-white relative">
-            <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/30 rounded-md w-max" id="card3Tag">Jal Samadhi Sthal</span>
-            <div>
-              <h3 class="text-xl font-bold font-cinzel" id="card3Title">Guptar Ghat</h3>
-              <p class="text-xs text-amber-200" id="card3Subtitle">Faizabad Cantt Riverfront</p>
+        <div class="ghat-card group bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="guptar-ghat">
+          <div class="h-48 relative overflow-hidden p-6 flex flex-col justify-between text-white">
+            <!-- Background Image -->
+            <img 
+              src="./assets/guptar-ghat.jpg" 
+              alt="Guptar Ghat Jal Samadhi" 
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              onerror="this.src='https://placehold.co/800x400/1e293b/ffffff?text=Guptar+Ghat'"
+            >
+            <!-- Card Dark Gradient Overlay for Contrast -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-slate-950/55"></div>
+            
+            <div class="relative z-10">
+              <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/50 backdrop-blur-sm border border-white/20 rounded-md w-max inline-block" id="card3Tag">Jal Samadhi Sthal</span>
+            </div>
+            <div class="relative z-10">
+              <h3 class="text-xl font-bold font-cinzel text-amber-100" id="card3Title">Guptar Ghat</h3>
+              <p class="text-xs text-amber-300" id="card3Subtitle">Faizabad Cantt Riverfront</p>
             </div>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
@@ -466,12 +517,24 @@
         </div>
 
         <!-- Card 4: Lakshman Ghat -->
-        <div class="ghat-card bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="lakshman-ghat">
-          <div class="h-44 bg-gradient-to-br from-amber-700 to-rose-950 p-6 flex flex-col justify-between text-white relative">
-            <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/30 rounded-md w-max" id="card4Tag">Historic Sanctum</span>
-            <div>
-              <h3 class="text-xl font-bold font-cinzel" id="card4Title">Lakshman Ghat</h3>
-              <p class="text-xs text-amber-200" id="card4Subtitle">Ancient Temple Steps</p>
+        <div class="ghat-card group bg-white rounded-2xl shadow-md border border-amber-200/80 overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1" data-category="lakshman-ghat">
+          <div class="h-48 relative overflow-hidden p-6 flex flex-col justify-between text-white">
+            <!-- Background Image -->
+            <img 
+              src="./assets/lakshman-ghat.jpg" 
+              alt="Lakshman Ghat Ancient Steps" 
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              onerror="this.src='https://placehold.co/800x400/78350f/ffffff?text=Lakshman+Ghat'"
+            >
+            <!-- Card Dark Gradient Overlay for Contrast -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-slate-950/55"></div>
+            
+            <div class="relative z-10">
+              <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 bg-black/50 backdrop-blur-sm border border-white/20 rounded-md w-max inline-block" id="card4Tag">Historic Sanctum</span>
+            </div>
+            <div class="relative z-10">
+              <h3 class="text-xl font-bold font-cinzel text-amber-100" id="card4Title">Lakshman Ghat</h3>
+              <p class="text-xs text-amber-300" id="card4Subtitle">Ancient Temple Steps</p>
             </div>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
@@ -791,6 +854,154 @@
     </div>
   </section>
 
+  <!-- Sacred Photo Gallery Section -->
+  <section id="gallery" class="py-20 bg-amber-50/70 border-t border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-saffron-700 font-bold" id="galleryBadge">Visual Journey of Saryu</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-cinzel mt-2" id="galleryHeading">
+          Glimpses of Sacred Saryu Ghat
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2" id="galleryDesc">
+          Witness the serene morning waters, radiant sunset Maha Aarti, illuminated Deepotsav diyas, and iconic riverfront moments.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+        
+        <!-- Gallery Item 1: Maha Aarti -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md bg-white border border-amber-200 cursor-pointer transform hover:-translate-y-1 transition-all duration-300" onclick="openLightbox('./assets/saryu-maha-aarti.jpg', 'Evening Saryu Maha Aarti', 'Priests holding radiant brass tiered lamps as conch shells resound at dusk.')">
+          <div class="h-64 overflow-hidden bg-slate-900">
+            <img 
+              src="./assets/saryu-maha-aarti.jpg" 
+              alt="Evening Saryu Maha Aarti" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/800x600/b45309/ffffff?text=Evening+Saryu+Maha+Aarti'"
+            >
+          </div>
+          <div class="p-4 bg-white flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full" id="gal1Tag">Maha Aarti</span>
+              <span class="text-xs text-slate-400">Naya Ghat</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 font-cinzel group-hover:text-saffron-600 transition-colors" id="gal1Title">Evening Saryu Maha Aarti</h3>
+            <p class="text-xs text-slate-600 mt-1 line-clamp-2" id="gal1Desc">Priests holding radiant brass tiered lamps as conch shells resound at dusk.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2: Deepotsav -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md bg-white border border-amber-200 cursor-pointer transform hover:-translate-y-1 transition-all duration-300" onclick="openLightbox('./assets/deepotsav-festival.jpg', 'Deepotsav Festival of Light', 'Millions of earthen diyas glowing across Ram Ki Paidi during Diwali.')">
+          <div class="h-64 overflow-hidden bg-slate-900">
+            <img 
+              src="./assets/deepotsav-festival.jpg" 
+              alt="Deepotsav Festival of Light" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/800x600/d97706/ffffff?text=Deepotsav+Festival'"
+            >
+          </div>
+          <div class="p-4 bg-white flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full" id="gal2Tag">Deepotsav</span>
+              <span class="text-xs text-slate-400">Guinness Record</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 font-cinzel group-hover:text-saffron-600 transition-colors" id="gal2Title">Deepotsav Festival of Light</h3>
+            <p class="text-xs text-slate-600 mt-1 line-clamp-2" id="gal2Desc">Millions of earthen diyas glowing across Ram Ki Paidi during Diwali.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3: Ram Ki Paidi Waterfront -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md bg-white border border-amber-200 cursor-pointer transform hover:-translate-y-1 transition-all duration-300" onclick="openLightbox('./assets/ram-ki-paidi.jpg', 'Ram Ki Paidi Waterfront', 'Architectural stepped banks and illuminated bridges reflecting across clean waters.')">
+          <div class="h-64 overflow-hidden bg-slate-900">
+            <img 
+              src="./assets/ram-ki-paidi.jpg" 
+              alt="Ram Ki Paidi Waterfront" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/800x600/f59e0b/ffffff?text=Ram+Ki+Paidi+Ghats'"
+            >
+          </div>
+          <div class="p-4 bg-white flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full" id="gal3Tag">Ram Ki Paidi</span>
+              <span class="text-xs text-slate-400">Promenade</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 font-cinzel group-hover:text-saffron-600 transition-colors" id="gal3Title">Ram Ki Paidi Waterfront</h3>
+            <p class="text-xs text-slate-600 mt-1 line-clamp-2" id="gal3Desc">Architectural stepped banks and illuminated bridges reflecting across clean waters.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4: Boats & Solar Cruise -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md bg-white border border-amber-200 cursor-pointer transform hover:-translate-y-1 transition-all duration-300" onclick="openLightbox('./assets/solar-cruise-boats.jpg', 'Solar Cruise & Boats', 'Eco-friendly passenger catamarans and wooden boats floating on the tranquil river.')">
+          <div class="h-64 overflow-hidden bg-slate-900">
+            <img 
+              src="./assets/solar-cruise-boats.jpg"     
+              alt="Solar Cruise & Boats" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/800x600/d97706/ffffff?text=Saryu+River+Cruise'"
+            >
+          </div>
+          <div class="p-4 bg-white flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full" id="gal4Tag">Boats & Cruise</span>
+              <span class="text-xs text-slate-400">Jatayu & Pushpak</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 font-cinzel group-hover:text-saffron-600 transition-colors" id="gal4Title">Solar Cruise & Boats</h3>
+            <p class="text-xs text-slate-600 mt-1 line-clamp-2" id="gal4Desc">Eco-friendly passenger catamarans and wooden boats floating on the tranquil river.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5: Water Screen Laser Show -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md bg-white border border-amber-200 cursor-pointer transform hover:-translate-y-1 transition-all duration-300" onclick="openLightbox('./assets/water-screen-laser-show.jpg', 'Water Screen Laser Show', 'Musical fountains and dynamic laser projections recounting the Ramayana saga.')">
+          <div class="h-64 overflow-hidden bg-slate-900">
+            <img 
+              src="./assets/water-screen-laser-show.jpg" 
+              alt="Water Screen Laser Show" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/800x600/78350f/ffffff?text=Laser+Show+Spectacle'"
+            >
+          </div>
+          <div class="p-4 bg-white flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full" id="gal5Tag">Ram Ki Paidi</span>
+              <span class="text-xs text-slate-400">Nightly 7:15 PM</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 font-cinzel group-hover:text-saffron-600 transition-colors" id="gal5Title">Water Screen Laser Show</h3>
+            <p class="text-xs text-slate-600 mt-1 line-clamp-2" id="gal5Desc">Musical fountains and dynamic laser projections recounting the Ramayana saga.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6: Dawn Snan & Serenity -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-md bg-white border border-amber-200 cursor-pointer transform hover:-translate-y-1 transition-all duration-300" onclick="openLightbox('./assets/dawn-snan-serenity.jpg', 'Dawn Snan & Serenity', 'Devotees offering prayers and lamps into the golden morning current.')">
+          <div class="h-64 overflow-hidden bg-slate-900">
+            <img 
+              src="./assets/dawn-snan-serenity.jpg" 
+              alt="Dawn Snan & Serenity" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/800x600/92400e/ffffff?text=Dawn+Snan+Rituals'"
+            >
+          </div>
+          <div class="p-4 bg-white flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full" id="gal6Tag">Holy Snan</span>
+              <span class="text-xs text-slate-400">Sunrise</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 font-cinzel group-hover:text-saffron-600 transition-colors" id="gal6Title">Dawn Snan & Serenity</h3>
+            <p class="text-xs text-slate-600 mt-1 line-clamp-2" id="gal6Desc">Devotees offering prayers and lamps into the golden morning current.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- Frequently Asked Questions (FAQ) & Interactive Google Map Section -->
   <section id="faqs" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
@@ -1028,6 +1239,32 @@
     </div>
   </div>
 
+  <!-- Interactive Photo Lightbox Modal -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden border border-amber-400/30 shadow-2xl flex flex-col">
+      <!-- Close Button -->
+      <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 text-white hover:bg-black/90 flex items-center justify-center transition-all focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Lightbox Image -->
+      <div class="w-full max-h-[68vh] overflow-hidden bg-black flex items-center justify-center">
+        <img id="lightboxImg" src="" alt="Enlarged View" class="w-full h-full max-h-[68vh] object-contain">
+      </div>
+
+      <!-- Lightbox Caption Bar -->
+      <div class="p-5 bg-gradient-to-r from-slate-900 to-slate-950 border-t border-slate-800 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+          <h4 class="text-base sm:text-lg font-bold font-cinzel text-amber-300" id="lightboxTitle"></h4>
+          <p class="text-xs sm:text-sm text-slate-300 mt-0.5" id="lightboxCaption"></p>
+        </div>
+        <button onclick="closeLightbox()" class="px-4 py-2 rounded-xl bg-saffron-600 hover:bg-saffron-700 text-white text-xs font-bold self-end sm:self-center transition-all">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Interactive Feedback Toast (No browser alert) -->
   <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-slate-900 text-white px-5 py-4 rounded-2xl shadow-2xl border border-amber-400/40 flex items-center gap-3">
     <div class="w-7 h-7 rounded-full bg-saffron-500 text-white flex items-center justify-center shrink-0">
@@ -1068,6 +1305,7 @@
             <li><a href="#ghats" class="hover:text-amber-300 transition-colors" id="fLink2">Ghat Directory</a></li>
             <li><a href="#aarti-schedule" class="hover:text-amber-300 transition-colors" id="fLink3">Aarti Timings</a></li>
             <li><a href="#connectivity" class="hover:text-amber-300 transition-colors" id="fLink4">How to Reach</a></li>
+            <li><a href="#gallery" class="hover:text-amber-300 transition-colors" id="fLinkGallery">Photo Gallery</a></li>
             <li><a href="#faqs" class="hover:text-amber-300 transition-colors" id="fLink5">Frequently Asked Questions</a></li>
           </ul>
         </div>
@@ -1125,6 +1363,7 @@
         navExperiences: 'Experiences',
         navAarti: 'Aarti Timings',
         navReach: 'How to Reach',
+        navGallery: 'Gallery',
         navFaqs: 'FAQs',
         planBtn: 'Plan Your Visit',
         heroBadge: 'Pavitra Teerth Kshetra • The Lifeblood of Ayodhya',
@@ -1258,6 +1497,32 @@
         reachRoadP1: 'Directly connected via NH 27 (Lucknow-Gorakhpur highway). Ayodhya Central Bus Stand is roughly 3.5 km away with inter-state UPSRTC luxury & regular bus services.',
         reachRoadP2: 'Within town, eco-friendly e-rickshaws run continuously along the paved Ram Path directly to Naya Ghat.',
         reachRoadFoot: 'Direct Highway Link via NH 27',
+        galleryBadge: 'Visual Journey of Saryu',
+        galleryHeading: 'Glimpses of Sacred Saryu Ghat',
+        galleryDesc: 'Witness the serene morning waters, radiant sunset Maha Aarti, illuminated Deepotsav diyas, and iconic riverfront moments.',
+        galTabAll: 'All Photos',
+        galTabAarti: 'Maha Aarti',
+        galTabDeepotsav: 'Deepotsav',
+        galTabRam: 'Ram Ki Paidi',
+        galTabBoats: 'Boats & Cruise',
+        gal1Title: 'Evening Saryu Maha Aarti',
+        gal1Desc: 'Priests holding radiant brass tiered lamps as conch shells resound at dusk.',
+        gal1Tag: 'Maha Aarti',
+        gal2Title: 'Deepotsav Festival of Light',
+        gal2Desc: 'Millions of earthen diyas glowing across Ram Ki Paidi during Diwali.',
+        gal2Tag: 'Deepotsav',
+        gal3Title: 'Ram Ki Paidi Waterfront',
+        gal3Desc: 'Architectural stepped banks and illuminated bridges reflecting across clean waters.',
+        gal3Tag: 'Ram Ki Paidi',
+        gal4Title: 'Solar Cruise & Boats',
+        gal4Desc: 'Eco-friendly passenger catamarans and wooden boats floating on the tranquil river.',
+        gal4Tag: 'Boats & Cruise',
+        gal5Title: 'Water Screen Laser Show',
+        gal5Desc: 'Musical fountains and dynamic laser projections recounting the Ramayana saga.',
+        gal5Tag: 'Ram Ki Paidi',
+        gal6Title: 'Dawn Snan & Serenity',
+        gal6Desc: 'Devotees offering prayers and lamps into the golden morning current.',
+        gal6Tag: 'Holy Snan',
         faqBadge: 'Clarifications & Navigation',
         faqHeading: 'Frequently Asked Questions & Live Location',
         faqSubheading: 'Find instant answers to common pilgrim inquiries and locate Saryu Ghat on the live interactive map.',
@@ -1301,6 +1566,7 @@
         fLink2: 'Ghat Directory',
         fLink3: 'Aarti Timings',
         fLink4: 'How to Reach',
+        fLinkGallery: 'Photo Gallery',
         fLink5: 'Frequently Asked Questions',
         footerHelpTitle: 'Pilgrim Assistance',
         fHelp1Label: 'UP Tourism Helpline:',
@@ -1326,6 +1592,7 @@
         navExperiences: 'पावन अनुभव',
         navAarti: 'आरती समय',
         navReach: 'कैसे पहुँचें',
+        navGallery: 'तस्वीरें (गैलरी)',
         navFaqs: 'प्रश्नोत्तरी',
         planBtn: 'यात्रा की योजना बनाएं',
         heroBadge: 'पवित्र तीर्थ क्षेत्र • अवध धाम की जीवनधारा',
@@ -1459,6 +1726,32 @@
         reachRoadP1: 'राष्ट्रीय राजमार्ग 27 (लखनऊ-गोरखपुर हाईवे) से सीधा जुड़ा। अयोध्या केंद्रीय बस स्टैंड मात्र 3.5 किमी दूर है।',
         reachRoadP2: 'शहर के भीतर राम पथ पर पर्यावरण-अनुकूल बैटरी ई-रिक्शा सीधे नया घाट तक निरंतर उपलब्ध रहते हैं।',
         reachRoadFoot: 'NH 27 द्वारा सुगम हाईवे संपर्क',
+        galleryBadge: 'सरयू पावन दर्शन यात्रा',
+        galleryHeading: 'सरयू पावन तट के मनोरम दृश्य',
+        galleryDesc: 'माँ सरयू की दिव्य महाआरती, दीपोत्सव के पावन दीप, राम की पैड़ी और सुरम्य नौका विहार के मनमोहक दृश्य।',
+        galTabAll: 'सभी दृश्य',
+        galTabAarti: 'महाआरती',
+        galTabDeepotsav: 'दीपोत्सव',
+        galTabRam: 'राम की पैड़ी',
+        galTabBoats: 'नौका व क्रूज़',
+        gal1Title: 'भव्य संध्या महाआरती',
+        gal1Desc: 'सूर्यास्त के समय शंखनाद और मंत्रोच्चार के बीच पीतल के विशाल दीपकों से आरती।',
+        gal1Tag: 'महाआरती',
+        gal2Title: 'विश्वविख्यात दीपोत्सव',
+        gal2Desc: 'दीपावली पर राम की पैड़ी पर जगमगाते लाखों पावन मिट्टी के दीपक।',
+        gal2Tag: 'दीपोत्सव',
+        gal3Title: 'राम की पैड़ी जलकुंड',
+        gal3Desc: 'स्वच्छ जलधारा, सुंदर सीढ़ियाँ और घाटों पर आलोकित मनोहारी स्थापत्य।',
+        gal3Tag: 'राम की पैड़ी',
+        gal4Title: 'सोलर क्रूज़ व नौका विहार',
+        gal4Desc: 'पावन जलधारा में तैरते आधुनिक सोलर क्रूज़ और पारंपरिक काष्ठ नौकाएं।',
+        gal4Tag: 'नौका व क्रूज़',
+        gal5Title: 'रामायण वाटर लेज़र शो',
+        gal5Desc: 'संगीतमय फव्वारों और रंग-बिरंगी लेज़र किरणों द्वारा रामायण प्रसंगों का प्रदर्शन।',
+        gal5Tag: 'राम की पैड़ी',
+        gal6Title: 'प्रातःकालीन पावन स्नान व शांति',
+        gal6Desc: 'सूर्योदय की स्वर्णिम किरणों में माँ सरयू की आराधना और दीपदान।',
+        gal6Tag: 'पवित्र स्नान',
         faqBadge: 'जिज्ञासा समाधान व मानचित्र',
         faqHeading: 'अक्सर पूछे जाने वाले प्रश्न एवं लाइव लोकेशन',
         faqSubheading: 'श्रद्धालुओं के मुख्य प्रश्नों के उत्तर व सरयू घाट का लाइव गूगल मानचित्र यहाँ देखें।',
@@ -1502,6 +1795,7 @@
         fLink2: 'प्रमुख घाट विवरण',
         fLink3: 'आरती समय सारणी',
         fLink4: 'कैसे पहुँचें',
+        fLinkGallery: 'चित्र दीर्घा (गैलरी)',
         fLink5: 'अक्सर पूछे जाने वाले प्रश्न',
         footerHelpTitle: 'श्रद्धालु सहायता केंद्र',
         fHelp1Label: 'पर्यटन हेल्पलाइन:',
@@ -1543,6 +1837,7 @@
       updateText('navExperiences', t.navExperiences);
       updateText('navAarti', t.navAarti);
       updateText('navReach', t.navReach);
+      updateText('navGallery', t.navGallery);
       updateText('navFaqs', t.navFaqs);
       updateText('navPlanBtn', t.planBtn);
 
@@ -1552,6 +1847,7 @@
       updateText('mNavExperiences', t.navExperiences);
       updateText('mNavAarti', t.navAarti);
       updateText('mNavReach', t.navReach);
+      updateText('mNavGallery', t.navGallery);
       updateText('mNavFaqs', t.navFaqs);
       updateText('mNavPlanBtn', t.planBtn);
 
@@ -1709,6 +2005,29 @@
       updateText('reachRoadP2', t.reachRoadP2);
       updateText('reachRoadFoot', t.reachRoadFoot);
 
+      // Gallery Section
+      updateText('galleryBadge', t.galleryBadge);
+      updateText('galleryHeading', t.galleryHeading);
+      updateText('galleryDesc', t.galleryDesc);
+      updateText('gal1Tag', t.gal1Tag);
+      updateText('gal1Title', t.gal1Title);
+      updateText('gal1Desc', t.gal1Desc);
+      updateText('gal2Tag', t.gal2Tag);
+      updateText('gal2Title', t.gal2Title);
+      updateText('gal2Desc', t.gal2Desc);
+      updateText('gal3Tag', t.gal3Tag);
+      updateText('gal3Title', t.gal3Title);
+      updateText('gal3Desc', t.gal3Desc);
+      updateText('gal4Tag', t.gal4Tag);
+      updateText('gal4Title', t.gal4Title);
+      updateText('gal4Desc', t.gal4Desc);
+      updateText('gal5Tag', t.gal5Tag);
+      updateText('gal5Title', t.gal5Title);
+      updateText('gal5Desc', t.gal5Desc);
+      updateText('gal6Tag', t.gal6Tag);
+      updateText('gal6Title', t.gal6Title);
+      updateText('gal6Desc', t.gal6Desc);
+
       // FAQs
       updateText('faqBadge', t.faqBadge);
       updateText('faqHeading', t.faqHeading);
@@ -1763,6 +2082,7 @@
       updateText('fLink2', t.fLink2);
       updateText('fLink3', t.fLink3);
       updateText('fLink4', t.fLink4);
+      updateText('fLinkGallery', t.fLinkGallery);
       updateText('fLink5', t.fLink5);
       updateText('footerHelpTitle', t.footerHelpTitle);
       updateText('fHelp1Label', t.fHelp1Label);
@@ -1888,6 +2208,38 @@
         } else {
           card.classList.add('hidden');
         }
+      });
+    }
+
+    // Photo Lightbox Controls
+    function openLightbox(imgSrc, title, desc) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const titleEl = document.getElementById('lightboxTitle');
+      const captionEl = document.getElementById('lightboxCaption');
+
+      if (!modal || !img) return;
+
+      img.src = imgSrc;
+      titleEl.innerText = title;
+      captionEl.innerText = desc;
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Close Lightbox on backdrop click
+    const lightboxModal = document.getElementById('lightboxModal');
+    if (lightboxModal) {
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
       });
     }
 
